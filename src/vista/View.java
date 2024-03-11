@@ -38,12 +38,21 @@ public class View extends JFrame{
 	public View(Listener control) {
 		this.listener=control;
 		init();
-		JPanel panel = new JPanel();
-		JLabel label1,label2,label3,DICI,MARVEL, OSITO;
 		
 		
 		
 		
+		
+		DICI.setBounds(1000,10,95,30);  
+		MARVEL.setBounds(1000,50,95,30);  
+		OSITO.setBounds(1000,90,95,30);  
+		
+		this.add(DICI);
+	    this.add(MARVEL);
+	    this.add(OSITO);
+	    this.add(label1);
+	    this.add(label2);
+	    this.add(label3);
 	    this.setVisible(true);
 		
 	}
