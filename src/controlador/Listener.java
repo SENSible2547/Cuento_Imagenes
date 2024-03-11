@@ -1,7 +1,14 @@
 package controlador;
 
 import vista.View;
+
+import java.util.ArrayList;
+
+import modelito.Desenlace;
+import modelito.Imagenes;
+import modelito.Inicio;
 import modelito.Modelo;
+import modelito.Nudo;
 
 
 public class Listener{
@@ -11,6 +18,9 @@ public class Listener{
 	public void setModelo(Modelo modelo) {
 		this.modelo = modelo;
 	}
+	public void setView(View vista) {
+		this.vista = vista;
+	}
 	
 	public Listener() {
 		vista.getDICI().addActionListener(e -> dc());
@@ -19,12 +29,20 @@ public class Listener{
 		
 	}
 	
-	public void setView(View vista) {
-		this.vista = vista;
-	}
+	
 	
 	private void dc() {
-		modelo.dc();
+		Inicio inicio = modelo.getInicio();
+        Nudo nudo = modelo.getNudo();
+        Desenlace desenlace = modelo.getDesenlace();
+        Imagenes imagenes = modelo.getImagenes();
+
+        String datosInicio = inicio.getTipo();
+        String datosNudo = nudo.getTipo();
+        String datosDesenlace = desenlace.getTipo();
+        ArrayList<String> datosImagenes = imagenes.getTipo();
+
+        vista.actualizarDatos(datosInicio, datosNudo, datosDesenlace, datosImagenes);
 	}
 	private void mv() {
 		modelo.mv();

@@ -1,5 +1,8 @@
 package vista;
 
+import java.util.ArrayList;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -14,16 +17,26 @@ public class View extends JFrame{
 	public JLabel label1=new JLabel();
 	public JLabel label2=new JLabel();
 	public JLabel label3=new JLabel();
+//	public JLabel labelImagenes=new JLabel();
 	
 	public JButton DICI=new JButton("DC"); 
 	public JButton MARVEL=new JButton("Marvel");  
 	public JButton OSITO=new JButton("Osito");
-
+	
+	public void actualizarDatos(String inicio, String nudo, String desenlace, ArrayList<String> imagenes) {
+		label1.setText("Inicio: " + inicio);
+        label2.setText("Nudo: " + nudo);
+        label3.setText("Desenlace: " + desenlace);
+        // Suponiendo que tienes un JLabel para mostrar imágenes
+        // Si tienes una clase específica para mostrar imágenes, debes adaptarlo aquí
+        
+//        labelImagenes.setIcon(new ImageIcon(imagenes));
+		
+	}
 	
 	public View(Listener control) {
 		this.listener=control;
 		init();
-		
 		
 		
 		

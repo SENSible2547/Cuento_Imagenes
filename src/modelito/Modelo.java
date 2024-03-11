@@ -9,10 +9,6 @@ import modelito.osito.FactoryOsito;
 public class Modelo {
 	Abstractfactory factory =null;
 	
-	Inicio i=factory.getInicio();
-	Nudo n=factory.getNudo();
-	Desenlace d=factory.getDesenlace();
-	Imagenes img=factory.getImagenes();
 	
 	public Abstractfactory dc() {
 		factory=new FactoryDc();
@@ -26,6 +22,20 @@ public class Modelo {
 		factory=new FactoryOsito();
 		return factory;
 	}
-	
 
+	 public Inicio getInicio() {
+	        return factory.getInicio();
+	    }
+
+	    public Nudo getNudo() {
+	        return factory.getNudo();
+	    }
+
+	    public Desenlace getDesenlace() {
+	        return factory.getDesenlace();
+	    }
+
+	    public Imagenes getImagenes() {
+	        return factory.getImagenes();
+	    }
 }
