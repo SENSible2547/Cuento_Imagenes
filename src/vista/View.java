@@ -6,6 +6,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import controlador.Listener;
 
@@ -37,22 +38,17 @@ public class View extends JFrame{
 	public View(Listener control) {
 		this.listener=control;
 		init();
+		JPanel panel = new JPanel();
+		JLabel label1,label2,label3,DICI,MARVEL, OSITO;
 		
 		
 		
 		
-		
-		this.add(DICI);
-	    this.add(MARVEL);
-	    this.add(OSITO);
-	    this.add(label1);
-	    this.add(label2);
-	    this.add(label3);
 	    this.setVisible(true);
 		
 	}
 	public void init() {
-		this.setSize(400, 400);
+		this.setSize(1500, 800);
 		this.setLayout(null);
 
 	}

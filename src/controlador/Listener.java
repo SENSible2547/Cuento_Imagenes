@@ -20,12 +20,13 @@ public class Listener{
 	}
 	public void setView(View vista) {
 		this.vista = vista;
-	}
-	
-	public Listener() {
 		vista.getDICI().addActionListener(e -> dc());
 		vista.getMARVEL().addActionListener(e -> mv());
 		vista.getOSITO().addActionListener(e -> Osito());
+	}
+	
+	public Listener() {
+		
 		
 	}
 	
