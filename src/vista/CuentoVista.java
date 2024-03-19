@@ -18,7 +18,7 @@ public class CuentoVista extends JFrame {
     
     public CuentoVista() {
         super("Cuentos de Fábrica");
-        setSize(800, 600);
+        setSize(1000, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
